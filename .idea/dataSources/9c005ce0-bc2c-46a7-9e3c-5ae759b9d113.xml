@@ -1,0 +1,33 @@
+<dataSource name="H2 - test">
+  <database-model serializer="dbm" rdbms="H2" format-version="2.6">
+    <database id="1" name="TEST">
+      <visible>1</visible>
+    </database>
+    <schema id="2" parent="1" name="PUBLIC">
+      <visible>1</visible>
+    </schema>
+    <table id="3" parent="2" name="USERS" />
+    <table id="4" parent="2" name="USER_ROLE" />
+    <column id="5" parent="3" name="USER_ID">
+      <data-type>INTEGER(10)|4</data-type>
+    </column>
+    <column id="6" parent="3" name="USER_NAME">
+      <data-type>VARCHAR(255)|12</data-type>
+    </column>
+    <column id="7" parent="3" name="USER_ROLE">
+      <data-type>INTEGER(10)|4</data-type>
+    </column>
+    <foreign-key id="8" parent="3" name="CONSTRAINT_4">
+      <columns>USER_ROLE</columns>
+      <ref-key>USER_ROLE(USER_ROLE_ID)</ref-key>
+      <cascade-update-rule>restrict</cascade-update-rule>
+      <cascade-delete-rule>restrict</cascade-delete-rule>
+    </foreign-key>
+    <column id="9" parent="4" name="USER_ROLE_ID">
+      <data-type>INTEGER(10)|4</data-type>
+    </column>
+    <column id="10" parent="4" name="USER_ROLE_NAME">
+      <data-type>VARCHAR(255)|12</data-type>
+    </column>
+  </database-model>
+</dataSource>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="H2 - test" uuid="9c005ce0-bc2c-46a7-9e3c-5ae759b9d113">
+    <database-info product="H2" version="1.4.192 (2016-05-26)" jdbc-version="4.0" driver-name="H2 JDBC Driver" driver-version="1.4.192 (2016-05-26)">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact"/>
+    <schema name="PUBLIC" catalog="TEST"/>
+    <table name="USERS" schema="PUBLIC" catalog="TEST" type="TABLE">
+      <column name="USER_ID" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="USER_NAME" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+      <column name="USER_ROLE" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <foreign-key name="CONSTRAINT_4" columns="USER_ROLE" ref-table="USER_ROLE" ref-schema="PUBLIC" ref-catalog="TEST" ref-columns="USER_ROLE_ID" update-rule="1" delete-rule="1" deferrability="2"/>
+    </table>
+    <table name="USER_ROLE" schema="PUBLIC" catalog="TEST" type="TABLE">
+      <column name="USER_ROLE_ID" sqlType="INTEGER" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="USER_ROLE_NAME" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
+    </table>
+  </data-source>
+</component>
